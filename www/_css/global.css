@@ -1,7 +1,7 @@
 linkstable {
     color: blue;
 }
-linkslist {
+linkslist li{
     list-style-type: none;
     margin: 0;
     padding: 0;
