@@ -3,30 +3,29 @@
 	{
 		"selected_items":
 		[
+			[
+				"t",
+				"th\tTag"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "<!DOCTYPE html>\n<!-- saved from url=(0050)http://getbootstrap.com/examples/starter-template/ -->\n<html lang=\"en\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n    \n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"\">\n    <link rel=\"icon\" href=\"http://getbootstrap.com/favicon.ico\">\n\n    <title>Gems by Langdon Catalog</title>\n\n    <!-- Bootstrap core CSS -->\n    <link href=\"./Starter Template for Bootstrap_files/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <link href=\"./Starter Template for Bootstrap_files/ie10-viewport-bug-workaround.css\" rel=\"stylesheet\">\n\n    <!-- Custom styles for this template -->\n    <link href=\"./Starter Template for Bootstrap_files/starter-template.css\" rel=\"stylesheet\">\n\n    <script src=\"./Starter Template for Bootstrap_files/ie-emulation-modes-warning.js.download\"></script>\n\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n    <!--[if lt IE 9]>\n      <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n      <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n  </head>\n\n  <body>\n\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"http://getbootstrap.com/examples/starter-template/#\">Project name</a>\n        </div>\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\n          <ul class=\"nav navbar-nav\">\n            <li class=\"active\"><a href=\"./index.htm#\">Home</a></li>\n            <li><a href=\"./about.htm\">About</a></li>\n            <li><a href=\"./contact.htm\">Contact</a></li>\n          </ul>\n        </div><!--/.nav-collapse -->\n      </div>\n    </nav>\n\n    <div class=\"container\">\n\n      <div class=\"starter-template\">\n        <h1>Bootstrap starter template</h1>\n        <p class=\"lead\">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>\n      </div>\n\n    </div><!-- /.container -->\n\n\n    <!-- Bootstrap core JavaScript\n    ================================================== -->\n    <!-- Placed at the end of the document so the pages load faster -->\n    <script src=\"./Starter Template for Bootstrap_files/jquery.min.js.download\"></script>\n    <script>window.jQuery || document.write('<script src=\"../../assets/js/vendor/jquery.min.js\"><\\/script>')</script>\n    <script src=\"./Starter Template for Bootstrap_files/bootstrap.min.js.download\"></script>\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <script src=\"./Starter Template for Bootstrap_files/ie10-viewport-bug-workaround.js.download\"></script>\n  \n\n</body></html>",
 			"file": "learning/lesson3/index.htm",
-			"file_size": 3611,
-			"file_write_time": 131369059030860380,
 			"settings":
 			{
-				"buffer_size": 3430,
+				"buffer_size": 6412,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<!doctype html>\n\n<html lang=\"en\">\n\n<head>\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->\n  <meta name=\"description\" content=\"About page\">  \n  <meta name=\"author\" content=\"Richard Illing\">\n  <link rel=\"icon\" href=\"http://getbootstrap.com/favicon.ico\">\n\n    <title>Gems by Langdon Catalog</title>\n\n    <!-- Bootstrap core CSS -->\n    <link href=\"./Starter Template for Bootstrap_files/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <link href=\"./Starter Template for Bootstrap_files/ie10-viewport-bug-workaround.css\" rel=\"stylesheet\">\n\n    <!-- Custom styles for this template -->\n    <link href=\"./Starter Template for Bootstrap_files/starter-template.css\" rel=\"stylesheet\">\n\n    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->\n    <!--[if lt IE 9]><script src=\"../../assets/js/ie8-responsive-file-warning.js\"></script><![endif]-->\n    <script src=\"./Starter Template for Bootstrap_files/ie-emulation-modes-warning.js.download\"></script>\n\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n    <!--[if lt IE 9]>\n      <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n      <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n  </head>\n\n  <body>\n\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"./index.htm\"> Catalogue of Gems</a>\n        </div>\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\n          <ul class=\"nav navbar-nav\">\n            <li class=\"active\"><a href=\"./index.htm#\">Home</a></li>\n            <li><a href=\"./about.htm\">About</a></li>\n            <li><a href=\"./contact.htm\">Contact</a></li>\n          </ul>\n        </div><!--/.nav-collapse -->\n      </div>\n    </nav>\n\n    <div class=\"container\">\n\n      <div class=\"starter-template\">\n        <h1>Bootstrap starter template</h1>\n        <p class=\"lead\">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>\n      </div>\n\n    </div><!-- /.container -->\n\n\n    <!-- Bootstrap core JavaScript\n    ================================================== -->\n    <!-- Placed at the end of the document so the pages load faster -->\n    <script src=\"./Starter Template for Bootstrap_files/jquery.min.js.download\"></script>\n    <script>window.jQuery || document.write('<script src=\"../../assets/js/vendor/jquery.min.js\"><\\/script>')</script>\n    <script src=\"./Starter Template for Bootstrap_files/bootstrap.min.js.download\"></script>\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <script src=\"./Starter Template for Bootstrap_files/ie10-viewport-bug-workaround.js.download\"></script>\n  \n\n</body></html>",
 			"file": "learning/lesson3/about.htm",
-			"file_size": 555,
-			"file_write_time": 131359560920000000,
 			"settings":
 			{
-				"buffer_size": 3513,
+				"buffer_size": 3656,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -66,13 +65,18 @@
 		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front",
 		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/learning",
 		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/learning/lesson3",
+		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/learning/lesson3/_css",
+		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/learning/lesson3/_js",
 		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/learning/lesson3/Starter Template for Bootstrap_files",
 		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/www",
 		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/www/_css",
-		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/www/_img"
+		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/www/_img",
+		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/www/_js"
 	],
 	"file_history":
 	[
+		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/learning/lesson3/_js/catalogue.json",
+		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/www/about.txt",
 		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/www/_css/global.css",
 		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/www/_js/global.js",
 		"/C/Users/dicky/Dropbox/src/js/gems/gem-shop-front/www/index.htm",
@@ -82,7 +86,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -96,6 +100,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"color\"",
+			"\"cut\"",
+			"\"carats\"",
+			"\"gemType\"",
+			"\"id\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -103,6 +112,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"color",
+			"cut",
+			"carats",
+			"gemType",
+			"\"gemId\"",
+			"gemId"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -122,15 +137,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3430,
+						"buffer_size": 6412,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3419,
-								3419
+								2834,
+								2834
 							]
 						],
 						"settings":
@@ -140,7 +155,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 601.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -152,15 +167,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3513,
+						"buffer_size": 3656,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2168,
-								2168
+								2640,
+								2640
 							]
 						],
 						"settings":
@@ -170,7 +185,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 450.0,
+						"translation.y": 510.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -181,7 +196,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -218,7 +233,7 @@
 	"project": "gem-shop-front.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

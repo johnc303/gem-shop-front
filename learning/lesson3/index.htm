@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)http://getbootstrap.com/examples/starter-template/ -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Richard Illing">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
     <title>Gems by Langdon Catalog</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./Starter Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./_bs/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="./Starter Template for Bootstrap_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="./_bs/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./Starter Template for Bootstrap_files/starter-template.css" rel="stylesheet">
+    <link href="./_bs/starter-template.css" rel="stylesheet">
 
-    <script src="./Starter Template for Bootstrap_files/ie-emulation-modes-warning.js.download"></script>
+    <script src="./_bs/ie-emulation-modes-warning.js.download"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -47,76 +47,78 @@
             <li class="active"><a href="./index.htm#">Home</a></li>
             <li><a href="./about.htm">About</a></li>
             <li><a href="./contact.htm">Contact</a></li>
+            <li><a href="./links.htm">Links</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-
+      
       <div class="starter-template">
         <h1>Gems by Langdon Catalogue</h1>
         <p class="lead"></p>
-        <table class="table table-striped table-border table-hover table-responsive">
-         <thead> <tr> <th> GemID </th> <th>Gem Type</th><th>Weight (ct)</th><th>Cut</th><th> Colour </th> </tr></thead>
-        <tbody id="table-body"> </tbody> </table>
-          <script type="text/javascript">
-              var gems = 
-
-              [
-                {gemId:"A",gemType:"Tourmaline",carats:0.7,cut:"Baguette",color:"Blue/Green"},
-                {gemId:"B",gemType:"Tourmaline",carats:0.65,cut:"Baguette",color:"Olive Green"},
-                {gemId:"C",gemType:"Tourmaline",carats:1.5,cut:"Baguette",color:"Light Blue/Green"},
-                {gemId:"D",gemType:"Tourmaline",carats:0.75,cut:"Baguette",color:"Light Blue"},
-                {gemId:"E",gemType:"Tourmaline",carats:1.45,cut:"Baguette",color:"Blue/Green"},
-                {gemId:"F",gemType:"Tourmaline",carats:0.9,cut:"Oval",color:"Light Green"},
-                {gemId:"G",gemType:"Tourmaline",carats:1,cut:"Oval",color:"Green"},
-                {gemId:"H",gemType:"Tourmaline",carats:0.65,cut:"Baguette",color:"Light Green"},
-                {gemId:"I",gemType:"Tourmaline",carats:0.7,cut:"Baguette",color:"Dark Green"},
-                {gemId:"J",gemType:"Tourmaline",carats:0.75,cut:"Baguette",color:"Dark Green"},
-                {gemId:"K",gemType:"Tourmaline",carats:1,cut:"Oval",color:"Light Green"},
-                {gemId:"L",gemType:"Tourmaline",carats:1.95,cut:"Baguette",color:"Dichroic Green"},
-                {gemId:"M",gemType:"Tourmaline",carats:1.95,cut:"Baguette",color:"Dichroic Gold"},
-                {gemId:"N",gemType:"Tourmaline",carats:2,cut:"Baguette",color:"Green/Blue"},
-                {gemId:"O",gemType:"Tourmaline",carats:2.25,cut:"Square",color:"Dark Yellow"},
-                {gemId:"P",gemType:"Tourmaline",carats:2.45,cut:"Baguette",color:"Gold"},
-                {gemId:"Q",gemType:"Tourmaline",carats:3.4,cut:"Baguette",color:"Gold Bicolour"},
-                {gemId:"R",gemType:"Tourmaline",carats:4.3,cut:"Baguette",color:"Dark gold"},
-                {gemId:"S",gemType:"Tourmaline",carats:0.8,cut:"Baguette",color:"Light Pink"},
-                {gemId:"T",gemType:"Tourmaline",carats:1.1,cut:"Hexagon",color:"Gold"},
-                {gemId:"U",gemType:"Tourmaline",carats:0.7,cut:"Round",color:"Pink"},
-                {gemId:"V",gemType:"Tourmaline",carats:1.4,cut:"Square",color:"Pink"},
-                {gemId:"W",gemType:"Tourmaline",carats:2.1,cut:"Square",color:"Purple"},
-                {gemId:"X",gemType:"Tourmaline",carats:2.55,cut:"Square",color:"Purple/Red"},
-                {gemId:"Y",gemType:"Tourmaline",carats:1,cut:"Square",color:"Light Pink"},
-                {gemId:"Z",gemType:"Tourmaline",carats:1.95,cut:"Hexagon",color:"Gold/Orange"}
-              ];
-
-                var result = "";
-                for(var i = 0;i < gems.length; i++) {
-                  result += "<tr><td>" + gems[i].gemId + "</td><td>"
-                                       + gems[i].gemType + "</td><td>"
-                                       + gems[i].carats  + "</td><td>" 
-                                       + gems[i].cut  + "</td><td>"
-                                       + gems[i].color 
-                          + "</td></tr>";  
-                  };
-                  
-                 document.getElementById("table-body").innerHTML = result;
-            </script>
+        <table class="table-responsive table-striped table-border table-hover">
+          <thead> <tr> <th> GemID </th> <th>Gem Type</th><th>Weight (ct)</th><th>Cut</th><th> Colour </th><th> Images </th> </tr></thead>
+          <tbody id="table-body"> </tbody>
+	</table>
+        <script type="text/javascript">
+          var gems = 
+          [
+          {gemId:"A",gemType:"Tourmaline",carats:0.7,cut:"Baguette",color:"Blue/Green"},
+          {gemId:"B",gemType:"Tourmaline",carats:0.65,cut:"Baguette",color:"Olive Green"},
+          {gemId:"C",gemType:"Tourmaline",carats:1.5,cut:"Baguette",color:"Light Blue/Green"},
+          {gemId:"D",gemType:"Tourmaline",carats:0.75,cut:"Baguette",color:"Light Blue"},
+          {gemId:"E",gemType:"Tourmaline",carats:1.45,cut:"Baguette",color:"Blue/Green"},
+          {gemId:"F",gemType:"Tourmaline",carats:0.9,cut:"Oval",color:"Light Green"},
+          {gemId:"G",gemType:"Tourmaline",carats:1,cut:"Oval",color:"Green"},
+          {gemId:"H",gemType:"Tourmaline",carats:0.65,cut:"Baguette",color:"Light Green"},
+          {gemId:"I",gemType:"Tourmaline",carats:0.7,cut:"Baguette",color:"Dark Green"},
+          {gemId:"J",gemType:"Tourmaline",carats:0.75,cut:"Baguette",color:"Dark Green"},
+          {gemId:"K",gemType:"Tourmaline",carats:1,cut:"Oval",color:"Light Green"},
+          {gemId:"L",gemType:"Tourmaline",carats:1.95,cut:"Baguette",color:"Dichroic Green"},
+          {gemId:"M",gemType:"Tourmaline",carats:1.95,cut:"Baguette",color:"Dichroic Gold"},
+          {gemId:"N",gemType:"Tourmaline",carats:2,cut:"Baguette",color:"Green/Blue"},
+          {gemId:"O",gemType:"Tourmaline",carats:2.25,cut:"Square",color:"Dark Yellow"},
+          {gemId:"P",gemType:"Tourmaline",carats:2.45,cut:"Baguette",color:"Gold"},
+          {gemId:"Q",gemType:"Tourmaline",carats:3.4,cut:"Baguette",color:"Gold Bicolour"},
+          {gemId:"R",gemType:"Tourmaline",carats:4.3,cut:"Baguette",color:"Dark gold"},
+          {gemId:"S",gemType:"Tourmaline",carats:0.8,cut:"Baguette",color:"Light Pink"},
+          {gemId:"T",gemType:"Tourmaline",carats:1.1,cut:"Hexagon",color:"Gold"},
+          {gemId:"U",gemType:"Tourmaline",carats:0.7,cut:"Round",color:"Pink"},
+          {gemId:"V",gemType:"Tourmaline",carats:1.4,cut:"Square",color:"Pink"},
+          {gemId:"W",gemType:"Tourmaline",carats:2.1,cut:"Square",color:"Purple"},
+          {gemId:"X",gemType:"Tourmaline",carats:2.55,cut:"Square",color:"Purple/Red"},
+          {gemId:"Y",gemType:"Tourmaline",carats:1,cut:"Square",color:"Light Pink"},
+          {gemId:"Z",gemType:"Tourmaline",carats:1.95,cut:"Hexagon",color:"Gold/Orange"}
+          ];
+	  
+          var result = "";
+          for(var i = 0;i < gems.length; i++) {
+			    result += "<tr><td>" + gems[i].gemId + "</td><td>"
+                            + gems[i].gemType + "</td><td>"
+                            + gems[i].carats  + "</td><td>" 
+                            + gems[i].cut  + "</td><td>"
+                            + gems[i].color  + "</td><td>"
+                            + '<a href="./_img/Gem' + gems[i].gemId + '/"> Images </a>' 
+                            + "</td></tr>";  
+			    };
+			    
+			    document.getElementById("table-body").innerHTML = result;
+        </script>
       </div>
-
+      
     </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Starter Template for Bootstrap_files/jquery.min.js.download"></script>
+    <script src="./_bs/jquery.min.js.download"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./Starter Template for Bootstrap_files/bootstrap.min.js.download"></script>
+    <script src="./_bs/bootstrap.min.js.download"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./Starter Template for Bootstrap_files/ie10-viewport-bug-workaround.js.download"></script>
+    <script src="./_bs/ie10-viewport-bug-workaround.js.download"></script>
   
 
 </body></html>
