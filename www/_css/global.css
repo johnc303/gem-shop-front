@@ -1,8 +1,8 @@
-linkslist li{
+ul linkslist{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-linkslist a {
+a linkslist{
     display: block;
 }
