@@ -7,15 +7,14 @@ var GEMS_TABLE = {
 
 	init: function () {
 		this._parseData();
-		this._renderData();
+		this._renderTable();
 	},
 
 	// Private
 	
-
 	_parseData: function (){
 
-		console.log("parsing GEMS_TABLE");
+		console.log("parsing GEMS_CATALOGUE");
 
 		var _currData;
 		for (i = 0; i < CATALOGUE_DATA.length; i++) {
@@ -26,7 +25,7 @@ var GEMS_TABLE = {
 	},
 
 
-	_renderData: function(){
+	_renderTable: function(){
 
 		console.log("rendering GEMS_TABLE");
 
@@ -39,14 +38,6 @@ var GEMS_TABLE = {
 		document.getElementById("gems-table-body").innerHTML = _output;
 	},
 	terminal: true
-};
-
-function _GemData ( gemInstance ) {
-	this.gemId = gemInstance.gemId;
-	this.gemType = gemInstance.gemType;
-	this.carats = gemInstance.carats;
-	this.cut = gemInstance.cut;
-	this.color = gemInstance.color;
 };
 
 _GemData.prototype.render = function() {
