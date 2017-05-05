@@ -32,16 +32,6 @@
     <script src="_js/catalogue.js"></script>
     <script src="_hb/handlebars-v4.0.5.js"></script> 
     <script src="_js/global.js"></script>
-    <script>
-    function renderTable() {
-        var source = $( "#entry-template" ).html();
-        var template = Handlebars.compile(source);
-        var context = { CATALOGUE_DATA };
-        var output = template(context);
-        document.getElementById( "gems-table-body" ).innerHTML = output;
-      };
-      </script>
-      
   </head>
 
   <body onload="renderTable();">
