@@ -15,7 +15,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./_bs/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="./_css/theme.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="./_bs/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -36,9 +36,58 @@
     <link href="_css/global.css" rel="stylesheet"/>
     <script src="_js/catalogue.js"></script>
     <script src="_js/gems-carousel.js"></script>
+    <script src="_hb/handlebars-v4.0.5.js"></script>
+    <script type="text/javascript">
+      function runHandlebars() {
+          var source=$("#carousel-template").html();
+          var template = Handlebars.compile(source);
+          var context = { CATALOGUE_DATA };
+          var output = template(context);
+         /* console.log ( output ); */
+          document.getElementById("gems-carousel").innerHTML = output;
+        }
+    </script>   
+    <script id="carousel-template" type="text/x-handlebars-template">
+
+      <ol class="carousel-indicators">
+        {{#each CATALOGUE_DATA}}
+          {{#if @first}}
+             <li data-target="#gems-carousel" data-slide-to="{{@index}}" class="active"></li>
+          {{else}}
+             <li data-target="#gems-carousel" data-slide-to="{{@index}}"></li>
+          {{/if}}
+        {{/each}}
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        {{#each CATALOGUE_DATA}}
+          {{#if @first}}
+            <div class="item active">
+          {{else}}
+            <div class="item">
+          {{/if}}
+            <img src="./_img/Gem{{gemId}}/gem{{gemId}}_1.jpg" alt="{{color}} {{gemType}}">
+            <div class="carousel-caption">
+              <h3>{{color}} {{gemType}}</h3>
+              <p>{{carats}}ct {{cut}} cut</p>
+            </div>
+          </div>
+        {{/each}}
+
+      </div>
+
+      <a class="left carousel-control" href="#gem-carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span></a>'
+      <a class="right carousel-control" href="#gem-carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span></a>
+    </div>
+    </script>
   </head>
 
-  <body onload="GEMS_CAROUSEL.init();">
+  <body onload="runHandlebars();">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -66,8 +115,7 @@
 
       <div class="starter-template">
         <h1 class="jumbotron">About Gems by Langdon</h1>
-        <p class="well">James Langdon has been cutting and polishing precious and semi-precious gems for several years from a small workshop in Brighton.<br>
-        To give his work a unique selling point he developed a concave faceting rig.  He is (as far as is presently known)  the only faceter making concave cuts in the South of England.
+        <p class="well">James Langdon has been cutting and polishing precious and semi-precious gems for several years from a small workshop in Brighton.<br>To give his work a unique selling point he developed a concave faceting rig.  He is (as far as is presently known)  the only faceter making concave cuts in the South of England.
         </p>
       </div>
 

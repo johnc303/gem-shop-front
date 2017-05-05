@@ -1,6 +1,6 @@
 /*
 Data for static catalog
-CommenteDark to reflect present images
+Commented to reflect present images
 */
 
 var CATALOGUE_DATA = 
