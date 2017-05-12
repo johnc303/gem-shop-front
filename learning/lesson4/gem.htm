@@ -32,10 +32,9 @@
     <script src="_js/catalogue.js"></script>
     <script src="_hb/handlebars-v4.0.5.js"></script> 
     <script src="_js/global.js"></script>
-    
   </head>
 
-  <body onload="renderTable();">
+  <body onload=";">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -58,51 +57,11 @@
       </div>
     </nav>
 
-    <div class="container">
-      
-      <div class="starter-template">
-        <h1>Gems by Langdon Catalogue</h1>
-        <p class="lead"></p>
-        <table class="table table-responsive table-striped table-border table-hover" id="gems-table">
-          <thead> 
-           <tr>
-               <th>GemID</th> 
-               <th>Gem Type</th>
-               <th>Weight (ct)</th>
-               <th>Cut</th>
-               <th>Colour</th>
-               <th>Images</th> 
-            </tr>
-          </thead>
-          <tbody id="gems-table-body"> </tbody>
-           <script id="entry-template" type="text/x-handlebars-template">
-            {{#each CATALOGUE_DATA}}
-              <tr>
-                <td>{{gemId}}</td> 
-                <td>{{gemType}}</td>
-                <td>{{carats}}</td>
-                <td>{{cut}}</td>
-                <td>{{color}}</td>
-                <td><a href="./gem.htm?id={{gemId}}"><img class="img-responsive img-rounded thumbnail" src="./_img/Gem{{gemId}}/Gem{{gemId}}_thumb.jpg" width="175" height="175" />{{color}} {{gemType}}</a></td>
-              </tr>
-            {{/each}}
-          </script>
-
-	      </table>
-       
-      </div>
-      
-    </div><!-- /.container -->
+    <div>
+        
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./_bs/jquery.min.js.download"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./_bs/bootstrap.min.js.download"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./_bs/ie10-viewport-bug-workaround.js.download"></script>
-  
+    </div>
+        
 
-</body></html>
+    </body>
