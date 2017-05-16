@@ -1,0 +1,24 @@
+<ol class="carousel-indicators">
+  {{#each CATALOGUE_DATA}}
+    {{#if @first}}
+       <li data-target="#gems-carousel" data-slide-to="{{@index}}" class="active"></li>
+    {{else}}
+       <li data-target="#gems-carousel" data-slide-to="{{@index}}"></li>
+    {{/if}}
+  {{/each}}
+</ol>
+<div class="carousel-inner" role="listbox">
+  {{#each CATALOGUE_DATA}}
+    {{#if @first}}
+      <div class="item active">
+    {{else}}
+      <div class="item">
+    {{/if}}
+        <img src="./img/Gem{{gemId}}/gem{{gemId}}_1.jpg" alt="{{color}} {{gemType}}">
+        <div class="carousel-caption">
+          <h3>{{color}} {{gemType}}</h3>
+          <p>{{carats}}ct {{cut}} cut</p>
+        </div>
+      </div>
+  {{/each}}
+</div> <!-- carousel-inner -->

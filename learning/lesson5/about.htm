@@ -37,30 +37,15 @@
     <script src="third-party/handlebars/handlebars-v4.0.5.js"></script>
     <script src="_js/catalogue.js"></script>
     <script src="_js/global.js"></script>
-    
+    <script src="_js/templateMgr.js"></script>
+
   </head>
 
-  <body onload="renderCarousel();">
+  <body onload="TEMPLATE_MANAGER.renderTemplate( 'topNavHolder', 'header.hbt', {location:window.location.pathname.split('/').pop()});TEMPLATE_MANAGER.renderTemplate('gems-carousel', 'carousel.hbt', { CATALOGUE_DATA });">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="./index.htm">Gems by Langdon Catalogue</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="./index.htm">Home</a></li>
-            <li class="active"><a href="./about.htm#">About</a></li>
-            <li><a href="./contact.htm">Contact</a></li>
-            <li><a href="./links.htm">Links</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+      <div id="topNavHolder" class="container">
+       
       </div>
     </nav>
 
@@ -68,45 +53,14 @@
 
       <div class="starter-template">
         <h1 class="jumbotron">About Gems by Langdon</h1>
-        <p class="well">James Langdon has been cutting and polishing precious and semi-precious gems for several years from a small workshop in Brighton.<br>To give his work a unique selling point he developed a concave faceting rig.  He is (as far as is presently known)  the only faceter making concave cuts in the South of England.
-        </p>
+        <p class="well">James Langdon has been cutting and polishing precious and semi-precious gems for several years from a small workshop in Brighton.<br>To give his work a unique selling point he developed a concave faceting rig.  He is (as far as is presently known) the only faceter making concave cuts in the South of England.</p>
       </div>
 
     </div><!-- /.container -->
 
 
 <div id="gems-carousel" class="carousel slide" data-ride="carousel">
-  <script id="carousel-template" type="text/x-handlebars-template">
 
-      <ol class="carousel-indicators">
-        {{#each CATALOGUE_DATA}}
-          {{#if @first}}
-             <li data-target="#gems-carousel" data-slide-to="{{@index}}" class="active"></li>
-          {{else}}
-             <li data-target="#gems-carousel" data-slide-to="{{@index}}"></li>
-          {{/if}}
-        {{/each}}
-      </ol>
-
-      <div class="carousel-inner" role="listbox">
-
-        {{#each CATALOGUE_DATA}}
-          {{#if @first}}
-            <div class="item active">
-          {{else}}
-            <div class="item">
-          {{/if}}
-              <img src="./img/Gem{{gemId}}/gem{{gemId}}_1.jpg" alt="{{color}} {{gemType}}">
-              <div class="carousel-caption">
-                <h3>{{color}} {{gemType}}</h3>
-                <p>{{carats}}ct {{cut}} cut</p>
-              </div>
-            </div>
-        {{/each}}
-
-      </div> <!-- carousel-inner --> 
-      
-  </script> <!-- carousel-template -->
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#gems-carousel" role="button" data-slide="prev">
   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -119,14 +73,14 @@
 
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./third-party/bootstrap/jquery.min.js.download"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./third-party/bootstrap/bootstrap.min.js.download"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./third-party/bootstrap/ie10-viewport-bug-workaround.js.download"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./third-party/bootstrap/jquery.min.js.download"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="./third-party/bootstrap/bootstrap.min.js.download"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./third-party/bootstrap/ie10-viewport-bug-workaround.js.download"></script> 
   
 
 </body></html>

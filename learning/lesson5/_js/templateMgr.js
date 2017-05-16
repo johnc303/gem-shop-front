@@ -1,7 +1,7 @@
 var TEMPLATE_MANAGER = {
 	//John's conventional properties
 	id: "Template manager",
-	description: "handles loading and presentation of templates",
+	description: "handles loading and presentation of (Handlebars) templates",
 
 	_templateData: {},
 	_templatePath: "templates/",

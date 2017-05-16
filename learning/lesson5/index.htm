@@ -31,24 +31,21 @@
     <link href="_css/global.css" rel="stylesheet"/>
     <script src="_js/catalogue.js"></script>
     <script src="third-party/handlebars/handlebars-v4.0.5.js"></script> 
-    <script src="_js/global.js"></script>
     <script src="_js/templateMgr.js"></script>
+    <script src="_js/global.js"></script>
     
   </head>
 
-  <body onload="renderTable(); TEMPLATE_MANAGER.renderTemplate( 'topNavHolder', 'header.hbt', {location:window.location.pathname.split('/').pop()});">
+  <body onload="TEMPLATE_MANAGER.renderTemplate( 'topNavHolder', 'header.hbt', {location:window.location.pathname.split('/').pop()});TEMPLATE_MANAGER.renderTemplate('gems-table-body', 'gems-table.hbt', { CATALOGUE_DATA });">
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div id="topNavHolder" class="container">
-
-      </div>
+      <div id="topNavHolder" class="container"> </div>
     </nav>
 
-    <div class="container">
+    <div class="container starter-template">
       
-      <div class="starter-template">
         <h1>Gems by Langdon Catalogue</h1>
         <p class="lead"></p>
-        <table class="table table-responsive table-striped table-border table-hover" id="gems-table">
+        <table class="table" id="gems-table">
           <thead> 
            <tr>
                <th>GemID</th> 
@@ -59,24 +56,9 @@
                <th>Images</th> 
             </tr>
           </thead>
-          <tbody id="gems-table-body"> </tbody>
-           <script id="entry-template" type="text/x-handlebars-template">
-            {{#each CATALOGUE_DATA}}
-              <tr>
-                <td>{{gemId}}</td> 
-                <td>{{gemType}}</td>
-                <td>{{carats}}</td>
-                <td>{{cut}}</td>
-                <td>{{color}}</td>
-                <td><a href="./gem.htm?id={{gemId}}"><img class="img-responsive img-rounded thumbnail" src="./img/Gem{{gemId}}/Gem{{gemId}}_thumb.jpg" width="175" height="175" />{{color}} {{gemType}}</a></td>
-              </tr>
-            {{/each}}
-          </script>
-
+          <tbody id="gems-table-body">  </tbody>
 	      </table>
-       
-      </div>
-      
+
     </div><!-- /.container -->
 
 
