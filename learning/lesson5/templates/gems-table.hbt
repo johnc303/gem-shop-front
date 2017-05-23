@@ -1,0 +1,10 @@
+{{#each CATALOGUE_DATA}}
+  <tr>
+    <td>{{gemId}}</td> 
+    <td>{{gemType}}</td>
+    <td>{{carats}}</td>
+    <td>{{cut}}</td>
+    <td>{{color}}</td>
+    <td><a href="./gem.htm?id={{gemId}}"><img class="img-responsive img-rounded thumbnail" src="./img/Gem{{gemId}}/Gem{{gemId}}_thumb.jpg" width="175" height="175"/>{{color}} {{gemType}}</a></td>
+  </tr>
+{{/each}}

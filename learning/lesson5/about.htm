@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="About page">  
+  <meta name="author" content="Richard Illing">
+  <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Gems by Langdon Catalog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./third-party/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./_css/theme.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./third-party/bootstrap/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./third-party/bootstrap/starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./third-party/bootstrap/ie-emulation-modes-warning.js.download"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="_css/global.css" rel="stylesheet"/>
+    <script src="third-party/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="_js/catalogue.js"></script>
+    <script src="_js/global.js"></script>
+    <script src="_js/templateMgr.js"></script>
+
+  </head>
+
+  <body onload="TEMPLATE_MANAGER.renderTemplate( 'topNavHolder', 'header.hbt', {location:window.location.pathname.split('/').pop()});TEMPLATE_MANAGER.renderTemplate('gems-carousel', 'carousel.hbt', { CAROUSEL_DATA });">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div id="topNavHolder" class="container">
+       
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1 class="jumbotron">About Gems by Langdon</h1>
+        <p class="well">James Langdon has been cutting and polishing precious and semi-precious gems for several years from a small workshop in Brighton.<br>To give his work a unique selling point he developed a concave faceting rig.  He is (as far as is presently known) the only faceter making concave cuts in the South of England.</p>
+      </div>
+
+    </div><!-- /.container -->
+
+
+<div id="gems-carousel" class="carousel slide" data-ride="carousel">
+      
+</div> <!-- gems-carousel -->
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./third-party/bootstrap/jquery.min.js.download"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="./third-party/bootstrap/bootstrap.min.js.download"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./third-party/bootstrap/ie10-viewport-bug-workaround.js.download"></script> 
+  
+
+</body></html>

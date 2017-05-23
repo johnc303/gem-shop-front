@@ -1,3 +1,5 @@
+<!doctype html>
+
 <!DOCTYPE html>
 
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,8 +15,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./_bs/bootstrap.min.css" rel="stylesheet">
-
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="./_css/theme.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="./_bs/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -30,12 +31,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href="_css/global.css" rel="stylesheet"/>
-    <script src="_js/catalogue.js"></script>
-    <script src="_js/gems-table.js"></script>
-
   </head>
 
-  <body onload="GEMS_TABLE.init();">
+  <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -50,36 +48,26 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="./index.htm#">Home</a></li>
-            <li>               <a href="./about.htm">About</a></li>
-            <li>               <a href="./contact.htm">Contact</a></li>
-            <li>               <a href="./links.htm">Links</a></li>
+            <li><a href="./index.htm">Home</a></li>
+            <li><a href="./about.htm">About</a></li>
+            <li class="active"><a href="./contact.htm#">Contact</a></li>
+            <li><a href="./links.htm">Links</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-      
+
       <div class="starter-template">
-        <h1>Gems by Langdon Catalogue</h1>
-        <p class="lead"></p>
-        <table class="table table-responsive table-striped table-border table-hover" id="gems-table">
-          <thead> 
-           <tr>
-               <th>GemID</th> 
-               <th>Gem Type</th>
-               <th>Weight (ct)</th>
-               <th>Cut</th>
-               <th>Colour</th>
-               <th>Images</th> 
-            </tr>
-           </thead>
-          <tbody id="gems-table-body"> </tbody>
-	     </table>
-       
+        <h1 class="jumbotron">Contact <br> Gems by Langdon</h1>
+        <p class="lead">
+
+        To get in touch with Gems by Langdon please jump through this hoop here: Email form, From; To; Subject; Body. Imagine also perhaps signing up to a mailing list here.
+
+        </p>
       </div>
-      
+
     </div><!-- /.container -->
 
 
