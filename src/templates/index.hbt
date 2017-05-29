@@ -1,0 +1,26 @@
+{{> header }}
+
+<body>
+
+{{> nav-bar }}
+
+<div class="container starter-template">
+  
+  <h1>Gems by Langdon Catalogue</h1>
+  <p class="lead"></p>
+  <table class="table table-bordered table-striped" id="gems-table">
+    <thead> 
+     <tr>
+         <th>GemID</th> 
+         <th>Gem Type</th>
+         <th>Weight (ct)</th>
+         <th>Cut</th>
+         <th>Colour</th>
+         <th>Images</th> 
+      </tr>
+    </thead>
+   {{> gems-table }}
+  </table>
+
+</div><!-- /.container -->
+

@@ -1,0 +1,19 @@
+.carousel-inner img {
+	border-radius: 30px;
+	max-width: 100%;
+    height: auto;
+}
+#gems-table img {
+ padding: 15px;
+}
+#gems-table td {
+	text-align: left;
+}
+/* imported from bootstraps's starter-template */
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}

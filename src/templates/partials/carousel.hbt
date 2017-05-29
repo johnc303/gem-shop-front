@@ -1,12 +1,13 @@
-<ol class="carousel-indicators">
-  {{#each CAROUSEL_DATA}}
-    {{#if @first}}
-       <li data-target="#gems-carousel" data-slide-to="{{@index}}" class="active"></li>
-    {{else}}
-       <li data-target="#gems-carousel" data-slide-to="{{@index}}"></li>
-    {{/if}}
-  {{/each}}
-</ol>
+<div id="gems-carousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		{{#each CAROUSEL_DATA}}
+			{{#if @first}}
+				<li data-target="#gems-carousel" data-slide-to="{{@index}}" class="active"></li>
+			{{else}}
+				<li data-target="#gems-carousel" data-slide-to="{{@index}}"></li>
+			{{/if}}
+		{{/each}}
+	</ol>
 <div class="carousel-inner" role="listbox">
   {{#each CAROUSEL_DATA}}
     {{#if @first}}
@@ -32,3 +33,4 @@
   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
   <span class="sr-only">Next</span>
 </a>
+</div> <!-- gems-carousel -->
