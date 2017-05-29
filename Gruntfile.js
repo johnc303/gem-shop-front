@@ -135,6 +135,11 @@ module.exports = function(grunt) {
 			images: {
 				files: 'src/img/*.{png,jpg,gif}',
 				tasks: ['imagemin']
+			},
+
+			templates: {
+				files: 'src/templates/**/*',
+				tasks: ['compile-handlebars']
 			}
 		}
     });

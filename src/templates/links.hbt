@@ -1,8 +1,8 @@
-{{> header }}
+{{> header}}
 
 <body>
 
-{{> nav-bar }}
+{{> nav-bar}}
 
 <div class="container">
 
