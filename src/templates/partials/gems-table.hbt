@@ -1,7 +1,7 @@
 <tbody id="gems-table-body"> 
   {{#each CATALOGUE_DATA}}
     <tr>
-      <td>{{this.gemId}}</td> 
+      <td>{{gemId}}</td> 
       <td>{{gemType}}</td>
       <td>{{carats}}</td>
       <td>{{cut}}</td>

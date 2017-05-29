@@ -4,11 +4,21 @@ module.exports = function(grunt) {
 
 	// var mozjpeg = require('imagemin-mozjpeg');
 
+	var _templateData = grunt.file.readJSON('src/_js/templateData.json');
+	var _CAROUSEL_DATA = [
+		_templateData.CATALOGUE_DATA[0],
+		_templateData.CATALOGUE_DATA[9],
+		_templateData.CATALOGUE_DATA[15],
+		_templateData.CATALOGUE_DATA[21],
+		_templateData.CATALOGUE_DATA[25]
+		];
+	_templateData.CAROUSEL_DATA = _CAROUSEL_DATA;
+
+
 	grunt.initConfig({
 
 		pkg: grunt.file.readJSON('package.json'),
 		
-
 		// configure jshint to validate js files -----------------------------------
     	jshint: {
       		options: {
@@ -17,7 +27,8 @@ module.exports = function(grunt) {
       		// when this task is run, lint the Gruntfile and all js files in _js
       		build: [
       			'Gruntfile.js',
-      			'src/_js/*.js'
+      			'src/_js/*.js',
+      			'src/_js/*.json'
       			]
     	},
 
@@ -46,7 +57,7 @@ module.exports = function(grunt) {
       		},
       		build: {
         		files: {
-          			'dist/_css/global.min.css': 'src/_css/global.css'
+          			 'dist/_css/global.min.css': [ 'src/_css/global.css', 'src/_css/theme.min.css' ]
         		}
         	}
         },
@@ -75,34 +86,14 @@ module.exports = function(grunt) {
                 }],
                 partials: 'src/templates/partials/*.hbt',
                 postHTML: 'src/templates/partials/footer.htm',
-                templateData: 'src/_js/templateData.json'
-            }
+				templateData: _templateData
+        	}
         },
-
 
         copy: {
         	build: {
         		files: [
-        		// Copy HTML files into root
-        	/*		{
-        				expand: true,
-        				src: 'src/*.htm',
-        				dest: 'dist/',
-        				flatten: true, 
-        				options: {
-        					process: function( content, srcpath) {
-        						return content.replace(/.css/g, '.min.css');
-        					}
-        				}
-        			},
-        		// Copy template files into template directory
-        			{
-        				expand: true,
-        				src: 'src/templates/*.hbt',
-        				dest: 'dist/templates/',
-        				flatten: true
-        			},*/
-        		// Copy third-party libraries
+          		// Copy third-party libraries
         			{
         				expand: true,
         				cwd: 'src/third-party/',
@@ -111,7 +102,6 @@ module.exports = function(grunt) {
         			}
         		]
         	}
-
         },
 
         clean: {
@@ -138,8 +128,8 @@ module.exports = function(grunt) {
 			},
 
 			templates: {
-				files: 'src/templates/**/*',
-				tasks: ['compile-handlebars']
+				files: [ 'Gruntfile.js', 'src/templates/**/*', 'src/_js/templateData.json'],
+				tasks: [ 'compile-handlebars']
 			}
 		}
     });
