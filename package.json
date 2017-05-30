@@ -11,6 +11,7 @@
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
+    "gruntify-eslint": "^3.1.0",
     "jshint-stylish": "latest"
   },
   "description": "Gem catalogue project",
