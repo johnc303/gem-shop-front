@@ -4,6 +4,9 @@ module.exports = {
         "jquery": true,
         "node": true
     },
+    "plugins": [
+        "json"
+    ],
     "extends": "eslint:recommended",
     "rules": {
         "accessor-pairs": "error",
@@ -79,7 +82,7 @@ module.exports = {
         "new-parens": "error",
         "newline-after-var": [
             "error",
-            "never"
+            "always"
         ],
         "newline-before-return": "error",
         "newline-per-chained-call": "error",
@@ -179,7 +182,7 @@ module.exports = {
         "no-with": "error",
         "nonblock-statement-body-position": "error",
         "object-curly-newline": "off",
-        "object-curly-spacing": "off",
+        "object-curly-spacing": "error",
         "object-property-newline": "off",
         "object-shorthand": [ 
             "error", 
