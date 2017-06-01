@@ -1,13 +1,12 @@
 {
 	"NAV": [
-        {"link": "index.htm", "name": "index" },
-        {"link": "about.htm", "name": "about" },
-        {"link": "contact.htm", "name": "contact" },
-        {"link": "links.htm", "name": "links" }
+        { "link": "index.htm", "name": "index" },
+        { "link": "about.htm", "name": "about" },
+        { "link": "contact.htm", "name": "contact" },
+        { "link": "links.htm", "name": "links" }
      ],
 
  	"STYLES": [
-        "third-party/bootstrap/bootstrap.min.css",
         "_css/global.min.css",
         "third-party/bootstrap/ie10-viewport-bug-workaround.css"
     ],
@@ -16,6 +15,12 @@
         "https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js",
         "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"
      ],
+
+    "THEME": [
+        { "name": "LUMEN", "file": "-lumen-theme" },
+        { "name": "CYBORG", "file": "-cyborg-theme" },
+        { "name": "VANILLA", "file": "-no-theme.min" }
+    ],
 
     "CATALOGUE_DATA": [
         { "gemId":1, "boxId":"A", "gemType":"Tourmaline","carats":0.7, "cut":"Baguette", "color":"Blue/Green", "approx dimensions":"1mmx8mm"},

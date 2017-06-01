@@ -10,8 +10,14 @@ module.exports = function( grunt ) {
 		_templateData.CATALOGUE_DATA[21],
 		_templateData.CATALOGUE_DATA[25]
 		];
-	_templateData.CAROUSEL_DATA = _CAROUSEL_DATA;
+	var _theme = 2;
+	var _bootstrapTheme = 'src/third-party/bootstrap/bootstrap' + _templateData.THEME[_theme].file + '.css';
 
+	_templateData.CAROUSEL_DATA = _CAROUSEL_DATA;
+	
+	/*  console.log( 
+		"theme suffix: " +  _templateData.THEME[_theme].file + "\n" +
+		"_bootstrapTheme: " + _bootstrapTheme );  */
 
 	grunt.initConfig( {
 
@@ -19,22 +25,26 @@ module.exports = function( grunt ) {
 		
 		// configure jshint to validate js files -----------------------------------
 		jshint: {
-				options: {
+			options: {
 				reporter: require( 'jshint-stylish' ) // use jshint-stylish to make our errors look and read good
-				},
-				// when this task is run, lint the Gruntfile and all js files in _js
-				build: [
-					'Gruntfile.js',
-					'src/_js/*.js',
-					'src/_js/*.json'
-					]
-},
+			},
+			// when this task is run, lint the Gruntfile, js, json files in _js
+			build: [
+				'Gruntfile.js',
+				'src/_js/*.js',
+				'src/_js/*.json'
+				]
+		},
 
-		eslint: {
+		eslint: {	// automatically takes its ruleset etc from .eslintrc.js
+			options: {
+				outputFile: 'tmp/eslintRun-<%= grunt.template.today("yyyy-mm-dd-HH-MM") %>.log'
+			},
 			build: {
 				src: [
 					'Gruntfile.js',
-					'src/**/*.js'
+					'src/**/*.js',
+					'src/_js/templateData.json'
 				]
 			}
 		},
@@ -63,7 +73,7 @@ module.exports = function( grunt ) {
 				},
 				build: {
 				files: {
-					'dist/_css/global.min.css': [  'src/_css/theme.min.css', 'src/_css/global.css' ]
+					'dist/_css/global.min.css': [ _bootstrapTheme, 'src/_css/global.css' ]
 				}
 			}
 		},
@@ -86,29 +96,29 @@ module.exports = function( grunt ) {
 				files: [ {
 					expand: true,
 					cwd: 'src/templates',
-					src:  '*.hbt',
+					src:  '*.hbs',
 					dest: 'dist/',
 					ext: '.htm'
 				}],
-				partials: 'src/templates/partials/*.hbt',
+				partials: 'src/templates/partials/*.hbs',
 				postHTML: 'src/templates/partials/footer.htm',
 				templateData: _templateData
 			}
-			},
+		},
 
-			copy: {
-				build: {
-					files: [
-						// Copy third-party libraries
-							{
-								expand: true,
-								cwd: 'src/third-party/',
-								src: '**/*',
-								dest: 'dist/third-party/'
-							}
-					]
-				}
-			},
+		copy: {
+			build: {
+				files: [
+					// Copy third-party libraries
+						{
+							expand: true,
+							cwd: 'src/third-party/',
+							src: '**/*',
+							dest: 'dist/third-party/'
+						}
+				]
+			}
+		},
 
 		clean: {
 			build: [ 'dist/' ]
@@ -124,8 +134,8 @@ module.exports = function( grunt ) {
 
 			// for scripts, run jshint and uglify 
 			scripts: { 
-				files: ['Gruntfile.js', 'src/_js/*.js'],
-				tasks: ['jshint', 'eslint', 'uglify']
+				files: ['Gruntfile.js', 'src/_js/*.js', '.eslintrc.js'],
+				tasks: ['jshint', 'eslint', 'cssmin', 'uglify']
 			},
 
 			images: {
