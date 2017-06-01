@@ -2,6 +2,7 @@
   "name": "gem-shop-front",
   "version": "0.1.0",
   "devDependencies": {
+    "eslint-plugin-json": "^1.2.0",
     "grunt": "~0.4.4",
     "grunt-compile-handlebars": "^2.0.2",
     "grunt-contrib-clean": "latest",
