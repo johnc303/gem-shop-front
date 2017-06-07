@@ -10,14 +10,12 @@ module.exports = function( grunt ) {
 		_templateData.CATALOGUE_DATA[21],
 		_templateData.CATALOGUE_DATA[25]
 		];
-	var _theme = 2;
+	var _theme = 1;
 	var _bootstrapTheme = 'src/third-party/bootstrap/bootstrap' + _templateData.THEME[_theme].file + '.css';
 
+//	var _path = require( 'path' );
+
 	_templateData.CAROUSEL_DATA = _CAROUSEL_DATA;
-	
-	/*  console.log( 
-		"theme suffix: " +  _templateData.THEME[_theme].file + "\n" +
-		"_bootstrapTheme: " + _bootstrapTheme );  */
 
 	grunt.initConfig( {
 
@@ -38,12 +36,12 @@ module.exports = function( grunt ) {
 
 		eslint: {	// automatically takes its ruleset etc from .eslintrc.js
 			options: {
-				outputFile: 'tmp/eslintRun-<%= grunt.template.today("yyyy-mm-dd-HH-MM") %>.log'
+				outputFile: 'tmp/eslintRun-<%= grunt.template.today("yyyy-mm-dd-HH") %>.log'
 			},
 			build: {
 				src: [
 					'Gruntfile.js',
-					'src/**/*.js',
+					'src/_js/*.js',
 					'src/_js/templateData.json'
 				]
 			}
@@ -78,13 +76,39 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		'responsive_images': {
+			build: {
+				options: {
+					sizes: [
+						{ name: 'thumb', width: 120 },
+						{ name: 'medium', width: 640 },
+						{ name: 'large', width: 1024 }
+					],
+					customOut: [
+						// draw a copywrite notice in the bottom-right corner 
+						'-gravity', 'SouthEast', '-font', 'Arial', '-pointsize', '12',
+						'-fill', '#445', '-draw', 'text 5,2 \'\u00A9\'',
+						'-fill', '#ffe', '-draw', 'text 6,3 \'\u00A9\''
+					]
+				},
+				files: [
+					{
+						expand: true,
+						cwd: 'src/',
+						src: ['img/**/*.jpg'],
+						dest: 'tmp/'
+					}
+				]
+			}
+		},
+
 		imagemin: {
 			build: {
 				files: [
 					{
 						expand: true,
-						cwd: 'src/',
-						src: ['img/**/*.{png,jpg,gif}'],
+						cwd: 'tmp/',
+						src: ['img/**/*.jpg'],
 						dest: 'dist/'
 					}
 				]
@@ -93,13 +117,15 @@ module.exports = function( grunt ) {
 
 		'compile-handlebars': {
 			build: {
-				files: [ {
-					expand: true,
-					cwd: 'src/templates',
-					src:  '*.hbs',
-					dest: 'dist/',
-					ext: '.htm'
-				}],
+				files: [ 
+					{
+						expand: true,
+						cwd: 'src/templates',
+						src:  '*.hbs',
+						dest: 'dist/',
+						ext: '.htm'
+					} 
+				],
 				partials: 'src/templates/partials/*.hbs',
 				postHTML: 'src/templates/partials/footer.htm',
 				templateData: _templateData
@@ -109,7 +135,7 @@ module.exports = function( grunt ) {
 		copy: {
 			build: {
 				files: [
-					// Copy third-party libraries
+						// Copy third-party libraries
 						{
 							expand: true,
 							cwd: 'src/third-party/',
@@ -120,39 +146,57 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		express: {
+			build: {
+				options: {
+					server: 'src/_js/gem-shop-front.js',
+					hostname: '*',
+					port: 3000,
+					bases: [ 'dist' ],
+					serverreload: true
+				}
+			}
+		},
+
 		clean: {
-			build: [ 'dist/' ]
+			build: [ 'dist/', 'tmp/img' ]
 		},
 
         watch: {
 			// for stylesheets, watch css files 
 			// only run cssmin 
 			stylesheets: {
-				files: ['src/_css/*.css'], 
-				tasks: ['cssmin'] 
+				files: [ 'src/_css/*.css' ], 
+				tasks: [ 'cssmin' ] 
 			},
 
 			// for scripts, run jshint and uglify 
 			scripts: { 
-				files: ['Gruntfile.js', 'src/_js/*.js', '.eslintrc.js'],
-				tasks: ['jshint', 'eslint', 'cssmin', 'uglify']
+				files: [ 'Gruntfile.js', 'src/_js/*.js', '.eslintrc.js' ],
+				tasks: [ 'jshint', 'eslint', 'cssmin', 'uglify' ]
 			},
 
 			images: {
 				files: 'src/img/*.{png,jpg,gif}',
-				tasks: ['imagemin']
+				tasks: [ 'imagemin' ]
 			},
 
 			templates: { 
-				files: [ 'Gruntfile.js', 'src/templates/**/*', 'src/_js/templateData.json'],
-				tasks: [ 'compile-handlebars']
+				files: [ 'Gruntfile.js', 'src/templates/**/*', 'src/_js/templateData.json' ],
+				tasks: [ 'compile-handlebars' ]
+			},
+
+			webServer: {
+				files: [ 'src/_js/gem-shop-front.js' ],
+				tasks: [ 'express-restart' ]
 			}
+
 		}
 	} );
 
 	// ============= // CREATE TASKS ========== //
-
-	grunt.registerTask( 'default', ['clean', 'jshint', 'eslint', 'uglify', 'cssmin', 'imagemin','compile-handlebars', 'copy'] );
+	grunt.registerTask( 'myServer', ['express', 'express-keepalive'] );
+	grunt.registerTask( 'default', ['clean', 'responsive_images', 'imagemin', 'jshint', 'eslint', 'uglify', 'cssmin', 'compile-handlebars', 'copy', 'express'] );
 
 	// ===========================================================================
 	// LOAD GRUNT PLUGINS ========================================================
@@ -168,4 +212,6 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
     grunt.loadNpmTasks( 'grunt-compile-handlebars' );
+    grunt.loadNpmTasks( 'grunt-responsive-images' );
+    grunt.loadNpmTasks( 'grunt-express' );
 };
