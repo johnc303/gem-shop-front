@@ -8,6 +8,7 @@
 			{{/if}}
 		{{/each}}
 	</ol>
+  
 <div class="carousel-inner" role="listbox">
   {{#each CAROUSEL_DATA}}
     {{#if @first}}
@@ -15,7 +16,7 @@
     {{else}}
       <div class="item">
     {{/if}}
-        <img class="img-responsive" src="./img/Gem{{gemId}}/gem{{gemId}}_1.jpg" alt="{{color}} {{gemType}}">
+        <img class="img-responsive" src="./img/Gem{{gemId}}/gem{{gemId}}_1-medium.jpg" alt="{{color}} {{gemType}}">
         <div class="carousel-caption">
           <h3>{{color}} {{gemType}}</h3>
           <p>{{carats}}ct {{cut}} cut</p>
