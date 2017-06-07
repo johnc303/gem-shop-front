@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "devDependencies": {
     "eslint-plugin-json": "^1.2.0",
+    "express": "^4.15.3",
+    "gm": "^1.23.0",
     "grunt": "~0.4.4",
     "grunt-compile-handlebars": "^2.0.2",
     "grunt-contrib-clean": "latest",
@@ -12,13 +14,16 @@
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
+    "grunt-express": "^1.4.1",
+    "grunt-responsive-images": "^1.10.1",
     "gruntify-eslint": "^3.1.0",
-    "jshint-stylish": "latest"
+    "jshint-stylish": "latest",
+    "node-cgi": "^0.4.0"
   },
   "description": "Gem catalogue project",
   "main": "index.htm",
   "dependencies": {
-    "grunt": "^1.0.1"
+    "body-parser": "^1.17.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
