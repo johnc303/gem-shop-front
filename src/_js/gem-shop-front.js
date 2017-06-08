@@ -16,6 +16,7 @@ app.post( '/', function ( request, response ) {
 
 app.get( '/gem/:gemId', function ( request, response ) {
 	response.send( request.params.gemId );
+	console.log( "gemId: %s", request.params.gemId );
 } );
 
 app.use( bodyParser.urlencoded( { extended: false } ) );
@@ -26,7 +27,7 @@ app.post( '/contact-us.js', function ( request, response ) {
 	var emailSubject = request.params.emailSubject;
 	var emailBody = request.params.emailBody;
 
-	response.send( "POST request to the homepage<p>email add: " + emailAddresponses + "</p><p>email subject: " + emailSubject + "</p><p>email body: " + emailBody + "</p>" );
+	response.send( "POST request to the homepage<p>email add: " + emailAddress + "</p><p>email subject: " + emailSubject + "</p><p>email body: " + emailBody + "</p>" );
 } );
 
 module.exports = app;
