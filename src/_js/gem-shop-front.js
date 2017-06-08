@@ -14,11 +14,15 @@ app.post( '/', function ( request, response ) {
 } );
 */ 
 
+app.get( '/gem/:gemId', function ( request, response ) {
+	response.send( request.params.gemId );
+} );
+
 app.use( bodyParser.urlencoded( { extended: false } ) );
 app.use( bodyParser.json() );
 
 app.post( '/contact-us.js', function ( request, response ) {
-	var emailAddresponses  = request.params.emailAddresponses;
+	var emailAddress  = request.params.emailAddress;
 	var emailSubject = request.params.emailSubject;
 	var emailBody = request.params.emailBody;
 
