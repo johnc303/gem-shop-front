@@ -74,7 +74,7 @@
         { "gemId":49, "boxId":"W", "gemType":"Tourmaline","carats":1.4, "cut":"Cabochon", "color":"", "approx dimensions":"" }
     ],
 
-    "LIGHTBOX_DATA": [
+    "IMAGES": [
         { 
             "gemId":1, 
             "images": [
@@ -112,7 +112,7 @@
                 "20170419_125147.jpg",
                 "20170419_125204.jpg",
                 "gem22_1.jpg",
-                "gem22_thumb.jpg" 
+                "gem22_thumb.jpg"
             ]
         },
         {
