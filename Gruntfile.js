@@ -128,7 +128,8 @@ module.exports = function( grunt ) {
 				],
 				partials: 'src/templates/partials/*.hbs',
 				postHTML: 'src/templates/partials/footer.htm',
-				templateData: _templateData
+				templateData: _templateData,
+				helpers: 'src/templates/helpers/*.js'
 			}
 		},
 
@@ -172,31 +173,32 @@ module.exports = function( grunt ) {
 
 			// for scripts, run jshint and uglify 
 			scripts: { 
-				files: [ 'Gruntfile.js', 'src/_js/*.js', '.eslintrc.js' ],
+				files: [ 'Gruntfile.js', 'src/_js/*.js', 'templates/helpers/*.js', '.eslintrc.js' ],
 				tasks: [ 'jshint', 'eslint', 'cssmin', 'uglify' ]
 			},
 
 			images: {
-				files: 'src/img/*.{png,jpg,gif}',
+				files: 'src/img/**/*.{png,jpg,gif}',
 				tasks: [ 'imagemin' ]
 			},
 
 			templates: { 
-				files: [ 'Gruntfile.js', 'src/templates/**/*', 'src/_js/templateData.json' ],
+				files: [ 'Gruntfile.js', 'src/templates/**/*.{hbs,htm}', 'src/_js/templateData.json' ],
 				tasks: [ 'compile-handlebars' ]
-			},
+			}
 
+/*
 			webServer: {
 				files: [ 'src/_js/gem-shop-front.js' ],
 				tasks: [ 'express-restart' ]
 			}
-
+*/
 		}
 	} );
 
 	// ============= // CREATE TASKS ========== //
 	grunt.registerTask( 'myServer', ['express', 'express-keepalive'] );
-	grunt.registerTask( 'default', ['clean', 'responsive_images', 'imagemin', 'jshint', 'eslint', 'uglify', 'cssmin', 'compile-handlebars', 'copy', 'express'] );
+	grunt.registerTask( 'default', ['clean', 'responsive_images', 'imagemin', 'jshint', 'eslint', 'uglify', 'cssmin', 'compile-handlebars', 'copy'] );
 
 	// ===========================================================================
 	// LOAD GRUNT PLUGINS ========================================================
