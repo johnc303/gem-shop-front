@@ -50,11 +50,11 @@ app.post( '/', function ( request, response ) {
 } );
 */ 
 
-app.get( '/gem/:_id', function ( request, response ) {
+app.get( '/gem/:gemId', function ( request, response ) {
 	when = new Date();
 
-	response.send( request.params._id );
-	console.log( "%s _id: %s", when.toUTCString(), request.params._id );
+	response.send( request.params.gemId );
+	console.log( "%s gemId: %s", when.toUTCString(), request.params.gemId );
 } );
 
 app.post( '/contact-us.js', contactPost );
