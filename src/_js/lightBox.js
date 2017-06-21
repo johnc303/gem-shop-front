@@ -4,25 +4,25 @@ $( function() {
 	var $gallery = $( '.gallery a' ).simpleLightbox();
 
 	$gallery.on( 'show.simplelightbox', function() {
-		console.log( 'Requested for showing' );
+		console.log( 'Request for showing' );
 	} )
 	.on( 'shown.simplelightbox', function() {
 		console.log( 'Shown' );
 	} )
 	.on( 'close.simplelightbox', function() {
-		console.log( 'Requested for closing' );
+		console.log( 'Request for close' );
 	} )
 	.on( 'closed.simplelightbox', function() {
 		console.log( 'Closed' );
 	} )
 	.on( 'change.simplelightbox', function() {
-		console.log( 'Requested for change' );
+		console.log( 'Request for change' );
 	} )
 	.on( 'next.simplelightbox', function() {
-		console.log( 'Requested for next' );
+		console.log( 'Request for next' );
 	} )
 	.on( 'prev.simplelightbox', function() {
-		console.log( 'Requested for prev' );
+		console.log( 'Request for prev' );
 	} )
 	.on( 'nextImageLoaded.simplelightbox', function() {
 		console.log( 'Next image loaded' );
