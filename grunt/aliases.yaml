@@ -1,0 +1,20 @@
+default:
+ - 'clean'
+ - 'responsive_images'
+ - 'imagemin'
+ - 'tree'
+ - 'parse-tree'
+ - 'jshint'
+ - 'eslint'
+ - 'db'
+ - 'uglify'
+ - 'cssmin'
+ - 'compile-handlebars'
+ - 'copy'
+
+myServer:
+ - 'express'
+ - 'express-keepalive'
+
+db:
+ - 'mongoimport'
