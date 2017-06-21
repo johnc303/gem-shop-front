@@ -1,12 +1,12 @@
 <tbody id="gems-table-body"> 
   {{#each CATALOGUE_DATA}}
     <tr>
-      <td>{{gemId}}</td> 
+      <td>{{_id}}</td> 
       <td>{{gemType}}</td>
       <td>{{carats}}</td>
       <td>{{cut}}</td>
       <td>{{color}}</td>
-      <td><a href="./gem/{{gemId}}"><img class="img-responsive thumbnail img-rounded" src="./img/Gem/{{gemId}}/gem{{gemId}}_thumb-thumb.jpg"/>{{color}} {{gemType}}</a></td>
+      <td><a href="./gem/{{_id}}"><img class="img-responsive thumbnail img-rounded" src="./img/gem/{{_id}}/gem{{_id}}_thumb-thumb.jpg"/>{{color}} {{gemType}}</a></td>
     </tr>
   {{/each}}
 </tbody>
