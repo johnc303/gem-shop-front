@@ -11,7 +11,7 @@ module.exports = {
 
 		files: [
 			{
-				src: ['src/img/gem/'],
+				src: ['dist/img/gem'],
 				dest: 'tmp/img/images-raw.json'
 			}
 		]

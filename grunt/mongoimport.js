@@ -43,17 +43,15 @@ module.exports =  {
 				file: 'src/_js/data/THEMES.json',
 				drop: true,
 				jsonArray : true
-			}
-
-			/*
+			},
 			{
 				name : 'images',
-				type :'json',
+				type : 'json',
 				file : 'tmp/img/images.json',
-				drop : true
+				drop : true,
+				jsonArray : true
 				// upsert : true
-				// jsonArray : true,
-			}*/
+			}
 		]
 	}
 };
