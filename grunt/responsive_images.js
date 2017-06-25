@@ -17,9 +17,9 @@ module.exports = {
 		files: [
 			{
 				expand: true,
-				cwd: 'src/',
+				cwd: 'tmp/',
 				src: ['img/**/*.jpg'],
-				dest: 'tmp/'
+				dest: 'dist/'
 			}
 		]
 	}

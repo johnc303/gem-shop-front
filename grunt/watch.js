@@ -2,7 +2,7 @@ module.exports = {
 	// for stylesheets, watch css files 
 	// only run cssmin 
 	stylesheets: {
-		files: [ 'src/_css/*.css' ], 
+		files: [ 'src/_css/*.css', 'grunt/cssmin.js' ], 
 		tasks: [ 'cssmin' ] 
 	},
 
@@ -14,7 +14,7 @@ module.exports = {
 
 	images: {
 		files: 'src/img/**/*.{png,jpg,gif}',
-		tasks: [ 'responsive_images', 'imagemin' ]
+		tasks: [ 'imagemin', 'responsive_images' ]
 	},
 
 	templates: { 

@@ -1,20 +1,25 @@
 default:
- - 'clean'
+ - clean
+ - imagemin
  - 'responsive_images'
- - 'imagemin'
- - 'tree'
- - 'parse-tree'
- - 'jshint'
- - 'eslint'
- - 'db'
- - 'uglify'
- - 'cssmin'
- - 'compile-handlebars'
- - 'copy'
+ - tree
+ - parse-tree
+ - jshint
+ - eslint
+ - db
+ - uglify
+ - cssmin
+ - compile-handlebars
+ - copy
+
+devel:
+ - jshint
+ - eslint
+ - compile-handlebars
 
 myServer:
- - 'express'
- - 'express-keepalive'
+ - express
+ - express-keepalive
 
 db:
- - 'mongoimport'
+ - mongoimport
