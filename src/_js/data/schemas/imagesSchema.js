@@ -9,7 +9,7 @@ var imagesSchema = new Schema(
 			required: 	true,
 			unique: 	true
 		},
-		images:	[String]
+		imageNames:	[String]
 	} );
-var Images = mongoose.model( 'Images', imagesSchema );
-module.exports = Images;
+
+module.exports = mongoose.model( 'Image', imagesSchema );

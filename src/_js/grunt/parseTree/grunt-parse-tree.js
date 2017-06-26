@@ -6,16 +6,16 @@ module.exports = function ( grunt ) {
 			var currGem = {};
 			var gemId = "";
 			var imageName = "";
-			function ImageArray( _gemId, _images ) {
-				this.gemId = _gemId;
-				this.images = _images;
+			function ImageArray( _gemId, _imageNames ) {
+				this.gemId = parseInt( _gemId );
+				this.imageNames = _imageNames;
 			}
 
 			for ( gemId in json ) {
 				currGem = json[gemId];
 				imageArray = new ImageArray(gemId, []);
 				for ( imageName in currGem ) {
-					imageArray.images.push( imageName );
+					imageArray.imageNames.push( imageName );
 				}
 				result.push( imageArray );
 			}

@@ -5,6 +5,7 @@ var mongoose = require( 'mongoose' );
 var Contacts = require( '../../src/_js/data/schemas/contactsSchema' );
 var Images = require( '../../src/_js/data/schemas/imagesSchema' );
 
+
 var cbContactPost = function( request, response ) {
 	var document = { 
 		'emailAddress': request.body.emailAddress,
@@ -29,41 +30,34 @@ var cbContactPost = function( request, response ) {
 					"</p><p>email subject: " + document.emailSubject + 
 					"</p><p>email body: " + document.emailBody + 
 					"</p><p>mailing list consent " + document.mailingListConsent +
-					"saved" );
+					" saved" );
 		}
 	} );
 	mongoose.connection.close();
 };
 
-var readImages = function ( imageId ) {
+var cbGemGet = function( request, response ) {
 	mongoose.connect( 'mongodb://localhost/gem-shop-front' );
-	// Images.find( { gemId: imageId }, function( err, data ) {
-	// 	console.log( "err: %s, data: %s", err, data );
-	// 	if ( err ) {
-	// 		throw err;
-	// 	} else {
-	// 		console.log( data );
-
-	// 		return data;
-	// 	}
-	// } );
-	// mongoose.connection.close();	
+	Images.findOne( { gemId: request.params.gemId }, function( err, data ) {
+		if ( err ) {
+			mongoose.connection.close();
+			throw err;
+		}
+		if ( data !== null ) {
+			response.status( 200 ).send( "Pass: " + data.imageNames );
+		} else {
+			response.status( 404 ).send( "Fail." );	
+		} 
+		// console.log( "imgs[%s]: %s",request.params.gemId, imgs[request.params.gemId] );
+		mongoose.connection.close();
+		// console.log( "ping" );
+	} );
 };
 
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded( { extended: true } ) );
 
-app.get( '/gem/:gemId', function( request, response ) {
-	// images = fs.readFile( 'tmp/img/images.json', 'utf8', cbReadImages );
-	var imgs = readImages( request.params.gemId );
-
-	if ( imgs[request.params.gemId] ) {
-		response.send( "Pass: %s", imgs[request.params.gemId] );
-	} else {
-		response.send( "Fail." );	
-	} 
-	console.log( "imgs[request.params.gemId]: ",  imgs[request.params.gemId] );
-} );
+app.get( '/gem/:gemId', cbGemGet );
 
 app.post( '/contact-us.js', cbContactPost );
 
