@@ -19,12 +19,12 @@
     "grunt-responsive-images": "^1.10.1",
     "gruntify-eslint": "^3.1.0",
     "jshint-stylish": "latest",
-    "mongodb": "^2.2.28",
+    "mongodb": "^2.2.29",
     "mongoimport": "^1.0.6",
-    "mongoose": "^4.10.7"
+    "mongoose": "^4.11.0"
   },
   "description": "Gem catalogue project",
-  "main": "index.htm",
+  "main": "src/_js/gem-shop-front.js",
   "dependencies": {
     "body-parser": "^1.17.2",
     "grunt-tree": "^1.1.1",
