@@ -4,18 +4,28 @@ default:
  - 'responsive_images'
  - tree
  - parse-tree
+ - db
+ - prettier
  - jshint
  - eslint
- - db
  - uglify
  - cssmin
  - compile-handlebars
  - copy
 
+init:
+ - imagemin
+ - 'responsive_images'
+ - tree
+ - parse-tree
+ - db
+
 devel:
+ - prettier
  - jshint
  - eslint
  - compile-handlebars
+ - copy
 
 myServer:
  - express

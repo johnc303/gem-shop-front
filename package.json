@@ -16,6 +16,7 @@
     "grunt-contrib-watch": "latest",
     "grunt-express": "^1.4.1",
     "grunt-mongoimport": "^0.1.7",
+    "grunt-prettier": "^0.1.0",
     "grunt-responsive-images": "^1.10.1",
     "gruntify-eslint": "^3.1.0",
     "jshint-stylish": "latest",
