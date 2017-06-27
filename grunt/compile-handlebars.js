@@ -66,16 +66,16 @@ module.exports = function ( grunt ) {
 			files: [ 
 				{
 					expand: true,
-					cwd: 'src/templates',
+					cwd: 'src/views',
 					src:  '*.hbs',
 					dest: 'dist/',
 					ext: '.htm'
 				} 
 			],
-			partials: 'src/templates/partials/*.hbs',
-			postHTML: 'src/templates/partials/footer.htm',
+			partials: 'src/views/partials/*.hbs',
+			postHTML: 'src/views/partials/footer.htm',
 			templateData: _templateData,
-			helpers: 'src/templates/helpers/*.js'
+			helpers: 'src/views/helpers/*.js'
 		}
 	};
 };

@@ -8,7 +8,7 @@ module.exports = {
 
 	// for scripts, run jshint and uglify 
 	scripts: { 
-		files: [ 'Gruntfile.js', 'src/grunt/*.js', 'src/_js/**/*.js', 'templates/helpers/*.js', '.eslintrc.js' ],
+		files: [ 'Gruntfile.js', 'src/grunt/*.js', 'src/_js/**/*.js', 'views/helpers/*.js', '.eslintrc.js' ],
 		tasks: [ 'jshint', 'eslint', 'cssmin', 'uglify' ]
 	},
 
@@ -20,7 +20,7 @@ module.exports = {
 	templates: { 
 		files: [ 
 			'Gruntfile.js',
-			'src/templates/**/*.{hbs,htm}',
+			'src/views/**/*.{hbs,htm}',
 			'src/_js/data/*.json',
 			'grunt/*.js'
 		],
