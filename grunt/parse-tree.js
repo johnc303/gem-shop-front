@@ -1,7 +1,7 @@
-module.exports =  {
+module.exports = {
 	build: {
 		files: {
-			src: [ 'tmp/img/images-raw.json' ]
+			src: ["tmp/img/images-raw.json"]
 		}
 	}
 };

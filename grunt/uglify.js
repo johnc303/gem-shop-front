@@ -7,9 +7,9 @@ module.exports = {
 			files: [
 				{
 					expand: true,
-					cwd: 'src/_js',
-					src: '*.js',
-					dest: 'dist/_js'
+					cwd: "src/_js",
+					src: "*.js",
+					dest: "dist/_js"
 				}
 			]
 		}

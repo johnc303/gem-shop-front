@@ -1,7 +1,9 @@
-module.exports =  {
+module.exports = {
 	build: {
-		expand: true,
-		usetabs: true,
-		src: [ 'Gruntfile.js', 'src/**/*.js' ]
-	}	
+		options: {
+			useTabs: true,
+			tabWidth: 4
+		},
+		src: ["Gruntfile.js", "src/**/*.js", "grunt/*.js"]
+	}
 };

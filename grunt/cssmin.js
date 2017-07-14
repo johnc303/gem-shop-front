@@ -1,14 +1,14 @@
 module.exports = {
 	options: {
 		banner: '/*<%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
-		},
-		build: {
-			files: {
-				'dist/_css/global.min.css': [ 
-					// _bootstrapTheme,
-					'src/_css/global.css',
-					'src/third-party/bootstrap/bootstrap-cyborg-theme.css'
-				]
-			}
+	},
+	build: {
+		files: {
+			"dist/_css/global.min.css": [
+				// _bootstrapTheme,
+				"src/_css/global.css",
+				"src/third-party/bootstrap/bootstrap-cyborg-theme.css"
+			]
+		}
 	}
 };
