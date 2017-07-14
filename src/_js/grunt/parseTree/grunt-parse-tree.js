@@ -1,23 +1,25 @@
-module.exports = function ( grunt ) {
-	grunt.registerMultiTask( 'parse-tree', 'Parses tree images data', 
-		function () {
-			var json = grunt.file.readJSON( this.filesSrc.pop() );
+module.exports = function(grunt) {
+	grunt.registerMultiTask(
+		"parse-tree",
+		"Parses tree images data",
+		function() {
+			var json = grunt.file.readJSON(this.filesSrc.pop());
 			var result = [];
 			var currGem = {};
 			var gemId = "";
 			var imageName = "";
-			function ImageArray( _gemId, _imageNames ) {
-				this.gemId = parseInt( _gemId );
+			function ImageArray(_gemId, _imageNames) {
+				this.gemId = parseInt(_gemId);
 				this.imageNames = _imageNames;
 			}
 
-			for ( gemId in json ) {
+			for (gemId in json) {
 				currGem = json[gemId];
 				imageArray = new ImageArray(gemId, []);
-				for ( imageName in currGem ) {
-					imageArray.imageNames.push( imageName );
+				for (imageName in currGem) {
+					imageArray.imageNames.push(imageName);
 				}
-				result.push( imageArray );
+				result.push(imageArray);
 			}
 			// for ( gemId in json ) {
 			// 	currGem = json[gemId];
@@ -29,8 +31,11 @@ module.exports = function ( grunt ) {
 			// 	}
 			// }
 
-			grunt.config.set( 'imageFileContents', result );
-			grunt.file.write( 'tmp/img/images.json', JSON.stringify( result, null, "\n\t" ) );
+			// grunt.config.set("imageFileContents", result);
+			grunt.file.write(
+				"tmp/img/images.json",
+				JSON.stringify(result, null, "\n\t")
+			);
 		}
 	);
 };
