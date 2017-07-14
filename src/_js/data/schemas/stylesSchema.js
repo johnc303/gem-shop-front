@@ -1,8 +1,7 @@
-var mongoose = require( 'mongoose' );
+var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-var stylesSchema = new Schema( {
+var stylesSchema = new Schema({
 	link: String
-} );
-var Style = mongoose.model( 'Style', stylesSchema );
+});
 
-module.exports = Style;
+module.exports = mongoose.model("Style", stylesSchema);

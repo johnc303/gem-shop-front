@@ -1,15 +1,14 @@
 // Schema for image name arrays
-var mongoose = require( 'mongoose' );
+var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-var imagesSchema = new Schema(
-	{
-		gemId: 	{ 
-			type: 		Number,
-			ref:		'Catalogue', 
-			required: 	true,
-			unique: 	true
-		},
-		imageNames:	[String]
-	} );
+var imagesSchema = new Schema({
+	gemId: {
+		type: Number,
+		ref: "Catalogue",
+		required: true,
+		unique: true
+	},
+	imageNames: [String]
+});
 
-module.exports = mongoose.model( 'Image', imagesSchema );
+module.exports = mongoose.model("Image", imagesSchema);
