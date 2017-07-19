@@ -77,7 +77,7 @@
     "IMAGES": [
          { 
              "gemId":1, 
-             "images": [
+             "imageNames": [
                  "gem1_1.jpg",
                  "gem1_2.jpg",
                  "gem1_thumb.jpg" 
@@ -85,7 +85,7 @@
          },
          { 
              "gemId":10,
-             "images": [
+             "imageNames": [
                  "20170419_125400.jpg",
                  "20170419_125405.jpg",
                  "20170419_125409.jpg",
@@ -99,14 +99,14 @@
          },
          { 
              "gemId":16, 
-             "images": [
+             "imageNames": [
                  "20170419_124836.jpg",
                  "gemP_1.jpg"
              ]
          },
          {
              "gemId":22,
-             "images": [
+             "imageNames": [
                  "20170419_125131.jpg",
                  "20170419_125141.jpg",
                  "20170419_125147.jpg",
@@ -117,7 +117,7 @@
          },
          {
              "gemId":26,
-             "images": [
+             "imageNames": [
                  "20170419_124410.jpg",
                  "20170419_124418.jpg",
                  "20170419_124432.jpg",
