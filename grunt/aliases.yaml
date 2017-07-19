@@ -14,6 +14,7 @@ default:
  - copy
 
 init:
+ - clean
  - imagemin
  - 'responsive_images'
  - tree
@@ -24,12 +25,15 @@ devel:
  - prettier
  - jshint
  - eslint
+ - uglify
+ - cssmin
  - compile-handlebars
  - copy
 
 myServer:
  - express
  - express-keepalive
+ # - node-inspector
 
 db:
  - mongoimport
