@@ -41,7 +41,7 @@ module.exports = {
         "dot-notation": "error",
         "eol-last": [
             "error",
-            "never"
+            "always"
         ],
         "eqeqeq": "error",
         "func-call-spacing": "error",
@@ -135,7 +135,7 @@ module.exports = {
         "no-new-wrappers": "error",
         "no-octal-escape": "error",
         "no-param-reassign": "error",
-        "no-path-concat": "error",
+        "no-path-concat": "warn",
         "no-plusplus": "error",
         "no-process-env": "error",
         "no-process-exit": "error",
@@ -216,7 +216,7 @@ module.exports = {
         "space-before-function-paren": "off",
         "space-in-parens": [
             "error",
-            "always"
+            "never"
         ],
         "space-infix-ops": "error",
         "space-unary-ops": "error",
