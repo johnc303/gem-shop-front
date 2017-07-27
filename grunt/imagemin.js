@@ -4,7 +4,7 @@ module.exports = {
 		files: [
 			{
 				expand: true,
-				cwd: "src/",
+				cwd: "build/",
 				src: ["img/**/*.jpg"],
 				dest: "tmp/"
 			}

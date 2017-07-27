@@ -1,3 +1,0 @@
-gem1_1.jpg
-gem1_2.jpg
-gem1_thumb.jpg

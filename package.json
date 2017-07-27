@@ -19,6 +19,8 @@
     "grunt-prettier": "^0.1.0",
     "grunt-responsive-images": "^1.10.1",
     "gruntify-eslint": "^3.1.0",
+    "hbs": "^4.0.1",
+    "helmet": "^3.8.0",
     "jshint-stylish": "latest",
     "mongodb": "^2.2.29",
     "mongoimport": "^1.0.6",

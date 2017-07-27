@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	var _templateData = grunt.file.readJSON("src/_js/templateData.json");
+	var _templateData = grunt.file.readJSON("build/data/templateData.json");
 	// var _LIGHTBOX_DATA = grunt.file.readJSON( 'tmp/img/images.json' );
 	// var templates = require("../src/_js/data/templateDBData.js");
 
@@ -20,16 +20,16 @@ module.exports = function(grunt) {
 			files: [
 				{
 					expand: true,
-					cwd: "src/views",
+					cwd: "build/views",
 					src: "*.hbs",
 					dest: "dist/",
 					ext: ".htm"
 				}
 			],
-			partials: "src/views/partials/*.hbs",
-			postHTML: "src/views/partials/footer.htm",
+			partials: "build/views/partials/*.hbs",
+			postHTML: "build/views/partials/footer.htm",
 			templateData: _templateData,
-			helpers: "src/views/helpers/*.js"
+			helpers: "build/views/helpers/*.js"
 		}
 	};
 };

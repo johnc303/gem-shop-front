@@ -2,8 +2,9 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-var Contacts = require("../../src/_js/data/schemas/contactsSchema");
-var Images = require("../../src/_js/data/schemas/imagesSchema");
+var dataBase = "mongodb://localhost/gem-shop-front";
+var Contacts = require("../../build/data/schemas/contactsSchema");
+var Images = require("../../build/data/schemas/imagesSchema");
 var hbs = require("hbs");
 var helmet = require("helmet");
 
@@ -16,7 +17,7 @@ var cbContactPost = function(request, response) {
 	};
 	var newContact = {};
 
-	mongoose.connect("mongodb://localhost/gem-shop-front");
+	mongoose.connect(dataBase);
 
 	if (request.body.mailingListConsent) {
 		document.mailingListConsent = true;

@@ -6,7 +6,7 @@ default:
  - parse-tree
  - db
  - prettier
- - jshint
+# - jshint
  - eslint
  - uglify
  - cssmin
@@ -23,7 +23,7 @@ init:
 
 devel:
  - prettier
- - jshint
+# - jshint
  - eslint
  - uglify
  - cssmin

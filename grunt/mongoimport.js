@@ -10,7 +10,7 @@ module.exports = {
 			{
 				name: "catalogue",
 				type: "json",
-				file: "src/_js/data/CATALOGUE.json",
+				file: "build/data/CATALOGUE.json",
 				drop: true,
 				jsonArray: true
 				// upsert : true, 		//	optional
@@ -18,28 +18,28 @@ module.exports = {
 			{
 				name: "ie8",
 				type: "json",
-				file: "src/_js/data/IE8.json",
+				file: "build/data/IE8.json",
 				drop: true,
 				jsonArray: true
 			},
 			{
 				name: "nav",
 				type: "json",
-				file: "src/_js/data/NAV.json",
+				file: "build/data/NAV.json",
 				drop: true,
 				jsonArray: true
 			},
 			{
 				name: "styles",
 				type: "json",
-				file: "src/_js/data/STYLES.json",
+				file: "build/data/STYLES.json",
 				drop: true,
 				jsonArray: true
 			},
 			{
 				name: "themes",
 				type: "json",
-				file: "src/_js/data/THEMES.json",
+				file: "build/data/THEMES.json",
 				drop: true,
 				jsonArray: true
 			},

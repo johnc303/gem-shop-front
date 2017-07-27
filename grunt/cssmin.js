@@ -6,8 +6,8 @@ module.exports = {
 		files: {
 			"dist/_css/global.min.css": [
 				// _bootstrapTheme,
-				"src/_css/global.css",
-				"src/third-party/bootstrap/bootstrap-cyborg-theme.css"
+				"src/client/_css/global.css",
+				"src/client/third-party/bootstrap/bootstrap-cyborg-theme.css"
 			]
 		}
 	}

@@ -8,8 +8,8 @@ module.exports = {
 		src: [
 			"Gruntfile.js",
 			"grunt/*.js",
-			"src/_js/*.js",
-			"src/_js/data/*.json"
+			"src/client/*.js",
+			"src/server/*.js"
 		]
 	}
 };

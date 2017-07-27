@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
 	require("load-grunt-config")(grunt);
 
-	grunt.loadTasks("src/_js/grunt/parseTree");
+	grunt.loadTasks("build/grunt/parseTree");
 	grunt.loadNpmTasks("gruntify-eslint");
 	grunt.loadNpmTasks("grunt-prettier");
 };
