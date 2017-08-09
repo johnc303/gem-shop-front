@@ -1,25 +1,17 @@
 default:
- - clean
- - imagemin
- - 'responsive_images'
- - tree
- - parse-tree
- - db
- - prettier
-# - jshint
- - eslint
- - uglify
- - cssmin
- - compile-handlebars
- - copy
+ - init
+ - devel
 
 init:
  - clean
- - imagemin
- - 'responsive_images'
+ - images
  - tree
  - parse-tree
  - db
+
+images:
+- imagemin
+- 'responsive_images'
 
 devel:
  - prettier

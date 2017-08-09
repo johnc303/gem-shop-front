@@ -1,3 +1,3 @@
 module.exports = {
-	build: ["dist/", "tmp/img"]
+	build: ["dist/"]
 };

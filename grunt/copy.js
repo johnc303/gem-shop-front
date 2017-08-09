@@ -4,7 +4,7 @@ module.exports = {
 			// Copy third-party libraries
 			{
 				expand: true,
-				cwd: "build/third-party/",
+				cwd: "src/client/third-party/",
 				src: "**/*",
 				dest: "dist/third-party/"
 			}

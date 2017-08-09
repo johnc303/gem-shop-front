@@ -2,7 +2,7 @@ module.exports = {
 	// for stylesheets, watch css files
 	// only run cssmin
 	stylesheets: {
-		files: ["src/_css/*.css", "grunt/cssmin.js"],
+		files: ["src/client/_css/*.css", "grunt/cssmin.js"],
 		tasks: ["cssmin"]
 	},
 
@@ -10,9 +10,10 @@ module.exports = {
 	scripts: {
 		files: [
 			"Gruntfile.js",
-			"src/grunt/*.js",
-			"src/_js/**/*.js",
-			"views/helpers/*.js",
+			"build/grunt/*.js",
+			"build/views/helpers/*.js",
+			"src/client/**/*.js",
+			"src/server/**/*.js",
 			".eslintrc.js",
 			"grunt/*.js"
 		],
@@ -27,8 +28,8 @@ module.exports = {
 	templates: {
 		files: [
 			"Gruntfile.js",
-			"src/views/**/*.{hbs,htm}",
-			"src/_js/data/*.json",
+			"build/views/**/*.{hbs,htm}",
+			"src/client/data/*.json",
 			"grunt/*.js"
 		],
 		tasks: ["compile-handlebars"]

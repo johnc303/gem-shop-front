@@ -1,19 +1,11 @@
 
-<script src="./third-party/simpleLightBox/simple-lightbox.js"></script>
-<link href="./third-party/simpleLightBox/simplelightbox.css" rel="stylesheet">
-<script src="./_js/lightBox.js"></script>
-
-
-
 <div class="container" id="lightbox">
 	<h1 class="align-center">Gem Gallery</h1>
 	<div class="gallery">
-
-		{{#each IMAGENAMES}} <!-- [GET_PARAM]-->
-
-			<a href="img/gem/{{gemid}}/{{this}}-large.jpg"><img src="img/gem/{{gemid}}/{{this}}-thumb.jpg" alt=""/></a>
-
-		{{/each}}
+		
+			{{#each gemData.imageNames }}
+				<a href="/img/gem/{{../gemData.gemId}}/{{this}}"><img src="/img/gem/{{../gemData.gemId}}/{{this}}" alt=""/></a>
+			{{/each}}
 
 	</div>
 </div>

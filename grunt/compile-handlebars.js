@@ -20,16 +20,16 @@ module.exports = function(grunt) {
 			files: [
 				{
 					expand: true,
-					cwd: "build/views",
+					cwd: "views",
 					src: "*.hbs",
 					dest: "dist/",
 					ext: ".htm"
 				}
 			],
-			partials: "build/views/partials/*.hbs",
-			postHTML: "build/views/partials/footer.htm",
+			partials: "views/partials/*.hbs",
+			postHTML: "views/partials/footer.htm",
 			templateData: _templateData,
-			helpers: "build/views/helpers/*.js"
+			helpers: "views/helpers/*.js"
 		}
 	};
 };

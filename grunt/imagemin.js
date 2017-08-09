@@ -1,6 +1,5 @@
 module.exports = {
 	build: {
-		overwrite: false,
 		files: [
 			{
 				expand: true,
