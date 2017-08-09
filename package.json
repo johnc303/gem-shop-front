@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "devDependencies": {
     "eslint-plugin-json": "^1.2.0",
-    "express": "^4.15.3",
+    "express": "^4.15.4",
     "gm": "^1.23.0",
-    "grunt": "^1.0.1",
+    "grunt": "^0.4.5",
     "grunt-compile-handlebars": "^2.0.2",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-copy": "^1.0.0",
@@ -20,18 +20,29 @@
     "grunt-responsive-images": "^1.10.1",
     "gruntify-eslint": "^3.1.0",
     "hbs": "^4.0.1",
-    "helmet": "^3.8.0",
+    "helmet": "^3.8.1",
     "jshint-stylish": "latest",
-    "mongodb": "^2.2.29",
-    "mongoimport": "^1.0.6",
-    "mongoose": "^4.11.0"
+    "mongodb": "^2.2.30",
+    "mongoimport": "^1.0.6"
   },
   "description": "Gem catalogue project",
   "main": "src/_js/gem-shop-front.js",
   "dependencies": {
+    "array-flatten": "^2.1.1",
     "body-parser": "^1.17.2",
+    "colors": "^1.1.2",
+    "grunt-cli": "^1.2.0",
+    "grunt-parallel": "^0.5.1",
     "grunt-tree": "^1.1.1",
-    "load-grunt-config": "^0.19.2"
+    "ipaddr.js": "^1.4.0",
+    "load-grunt-config": "^0.19.2",
+    "minimatch": "^3.0.4",
+    "mongoose": "^4.11.6",
+    "q": "^1.5.0",
+    "simplelightbox": "^1.11.1",
+    "vue": "^2.4.2",
+    "vue-lightbox": "^1.1.6",
+    "which": "^1.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
