@@ -1,5 +1,5 @@
 [
-	{ "name": "LUMEN", "file": "-lumen-theme" },
-	{ "name": "CYBORG", "file": "-cyborg-theme" },
-	{ "name": "VANILLA", "file": "-no-theme.min" }
+	{ "name": "LUMEN", "file": "_lumen_theme" },
+	{ "name": "CYBORG", "file": "_cyborg_theme" },
+	{ "name": "VANILLA", "file": "_no_theme.min" }
 ]
