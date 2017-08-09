@@ -3,10 +3,10 @@
 	max-width: 100%;
 	margin: auto;
 }
-#gems-table img {
+#gems_table img {
 	padding: 0;
 }
-#gems-table td {
+#gems_table td {
 	text-align: left;
 }
 /* imported from bootstraps's starter-template */
