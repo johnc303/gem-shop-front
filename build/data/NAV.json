@@ -1,0 +1,6 @@
+[
+    { "link": "index.htm", "name": "index" },
+    { "link": "about.htm", "name": "about" },
+    { "link": "contact.htm", "name": "contact" },
+    { "link": "links.htm", "name": "links" }
+]

@@ -3,3 +3,8 @@
 *.sublime-project
 *.sublime-workspace
 node_modules/*
+dist/*
+tmp/*
+util/GraphicsMagick-1.3.25-Q16/*
+docs/simplelightbox-master/*
+*.bat

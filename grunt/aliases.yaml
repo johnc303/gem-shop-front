@@ -1,0 +1,31 @@
+default:
+ - init
+ - devel
+
+init:
+ - clean
+ - images
+ - tree
+ - parse-tree
+ - db
+
+images:
+- imagemin
+- 'responsive_images'
+
+devel:
+ - prettier
+# - jshint
+ - eslint
+ - uglify
+ - cssmin
+ - compile-handlebars
+ - copy
+
+myServer:
+ - express
+ - express-keepalive
+ # - node-inspector
+
+db:
+ - mongoimport

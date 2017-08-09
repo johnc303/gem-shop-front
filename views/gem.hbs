@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="About page">  
+    <meta name="author" content="Richard Illing">
+
+	<title>Gems by Langdon</title>
+    {{#each STYLES}}
+  		<link href="/{{this}}" rel="stylesheet">
+    {{/each}}
+	<link href="/third-party/simpleLightBox/simplelightbox.min.css" rel="stylesheet">
+	
+
+	<body>
+
+		<div>
+			{{>nav_bar}}
+		</div>
+		<div>
+			{{>gem_lightbox}}
+		</div>
+		<!-- Bootstrap core JavaScript ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="/third-party/bootstrap/jquery.min.js.download"></script>
+		<script>window.jQuery || document.write('<script type="text/javascript" src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+		<script type="text/javascript" src="/third-party/bootstrap/bootstrap.min.js.download"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script type="text/javascript" src="/third-party/bootstrap/ie10-viewport-bug-workaround.js.download"></script>
+
+		<!-- Simplelightbox plugin -->
+		<script type="text/javascript" src="/third-party/simpleLightBox/simple-lightbox.min.js"></script>
+	
+		<script type="text/javascript" src="/third-party/simpleLightBox/lightBoxEventHandler.js"></script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<form method="POST" action="contact-us.js">
+
+	<div class="form-group">
+		<label for="emailAddress">Email address</label>
+		<input type="email" class="form-control" name="emailAddress" aria-describedby="emailAddressHelp" placeholder="Enter email address" required>
+		<small id="emailSubjectHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+	</div>
+
+	<div class="form-group">
+		<label for="emailSubject">Subject</label>
+		<select class="form-control" name="emailSubject" aria-describedby="emailSubjectHelp" placeholder="Subject">
+			<option>Details</option>
+			<option>Contact</option>
+		</select>
+		<small id="emailSubjectHelp" class="form-text text-muted">Subject (optional)</small>
+	</div>
+
+	<div class="form-group">
+		<label for="emailBody">Email</label>
+		<textarea required class="form-control" rows=5 name="emailBody" aria-describedby="emailBodyHelp" placeholder="Email body."></textarea>
+		<small id="emailBodyHelp" class="form-text text-muted">Please share your wisdom with us here.</small>
+	</div>
+
+	<div class="checkbox">
+  		<label for="mailingListConsent"><input name="mailingListConsent" type="checkbox" value="true">Mailing List</label>
+	</div>
+
+	<div class="form-group">
+		<button type="submit" class="btn btn-default">Submit</button>
+	</div>
+
+</form>

@@ -1,0 +1,37 @@
+<div id="gems-carousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		{{#each CAROUSEL_DATA}}
+			{{#if @first}}
+				<li data-target="#gems-carousel" data-slide-to="{{@index}}" class="active"></li>
+			{{else}}
+				<li data-target="#gems-carousel" data-slide-to="{{@index}}"></li>
+			{{/if}}
+		{{/each}}
+	</ol>
+  
+<div class="carousel-inner" role="listbox">
+  {{#each CAROUSEL_DATA}}
+    {{#if @first}}
+      <div class="item active">
+    {{else}}
+      <div class="item">
+    {{/if}}
+        <img class="img-responsive" src="./img/gem/{{gemId}}/gem{{gemId}}_1-medium.jpg" alt="{{color}} {{gemType}}">
+        <div class="carousel-caption">
+          <h3>{{color}} {{gemType}}</h3>
+          <p>{{carats}}ct {{cut}} cut</p>
+        </div>
+      </div>
+  {{/each}}
+</div> <!-- carousel-inner -->
+
+<!-- Left and right controls nothing dynamic -->
+<a class="left carousel-control" href="#gems-carousel" role="button" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#gems-carousel" role="button" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div> <!-- gems-carousel -->

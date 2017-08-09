@@ -1,0 +1,5 @@
+[
+	{ "name": "LUMEN", "file": "_lumen_theme" },
+	{ "name": "CYBORG", "file": "_cyborg_theme" },
+	{ "name": "VANILLA", "file": "_no_theme.min" }
+]
