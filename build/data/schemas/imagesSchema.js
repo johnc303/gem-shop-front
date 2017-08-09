@@ -11,4 +11,4 @@ var imagesSchema = new Schema({
 	imageNames: [String]
 });
 
-module.exports = mongoose.model("Image", imagesSchema);
+module.exports = mongoose.model("image", imagesSchema);
