@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 			// grunt.config.set("imageFileContents", result);
 			grunt.file.write(
 				"tmp/img/images.json",
-				JSON.stringify(result, null, "\n\t")
+				JSON.stringify(result, null, "\t")
 			);
 		}
 	);
