@@ -8,7 +8,7 @@
  
   	"STYLES": [
          "_css/global.min.css",
-         "third party/bootstrap/ie10-viewport-bug-workaround.css"
+         "third-party/bootstrap/ie10-viewport-bug-workaround.css"
      ],
  
  	"IE8": [
@@ -17,9 +17,9 @@
       ],
  
      "THEME": [
-         { "name": "LUMEN", "file": " lumen theme" },
-         { "name": "CYBORG", "file": " cyborg theme" },
-         { "name": "VANILLA", "file": " no theme.min" }
+         { "name": "LUMEN", "file": "_lumen_theme" },
+         { "name": "CYBORG", "file": "_cyborg_theme" },
+         { "name": "VANILLA", "file": "_no_theme.min" }
      ],
  
      "CATALOGUE_DATA": [
@@ -128,6 +128,14 @@
              ]
          }
      ],
+
+    "CAROUSEL_DATA": [
+        { "gemId":1, "boxId":"A", "gemType":"Tourmaline","carats":0.7, "cut":"Baguette", "color":"Blue/Green", "approx dimensions":"1mmx8mm" },
+        { "gemId":10, "boxId":"J", "gemType":"Tourmaline","carats":0.75, "cut":"Baguette", "color":"D Green", "approx dimensions":"3mmx7mm" },
+        { "gemId":16, "boxId":"P", "gemType":"Tourmaline","carats":2.45, "cut":"Baguette", "color":"Gold", "approx dimensions":"3mmx11mm" },
+        { "gemId":26, "boxId":"Z", "gemType":"Tourmaline","carats":1.95, "cut":"Hexagon", "color":"Gold/Orange", "approx dimensions":"6mm" },
+        { "gemId":22, "boxId":"V", "gemType":"Tourmaline","carats":1.4, "cut":"Square", "color":"Pink", "approx dimensions":"6mm" }
+    ],
  
    "terminal": true
  
